@@ -636,7 +636,7 @@ data:
               readOnlyRootFilesystem: true
               runAsGroup: {{ .ProxyGID | default "1337" }}
               runAsUser: {{ .ProxyUID | default "1337" }}
-              runAsNonRoot: true
+              runAsNonRoot: false
             {{- end }}
           {{ end -}}
           {{- if eq (annotation .ObjectMeta `sidecar.istio.io/enableCoreDump` .Values.global.proxy.enableCoreDump) "true" }}
@@ -882,7 +882,7 @@ data:
               runAsNonRoot: false
               runAsUser: 0
               {{- else -}}
-              runAsNonRoot: true
+              runAsNonRoot: false
               runAsUser: {{ .ProxyUID | default "1337" }}
               {{- end }}
               {{- end }}
@@ -2043,7 +2043,7 @@ data:
                   readOnlyRootFilesystem: true
                   runAsUser: {{ .ProxyUID | default "1337" }}
                   runAsGroup: {{ .ProxyGID | default "1337" }}
-                  runAsNonRoot: true
+                  runAsNonRoot: false
                 {{- else }}
                   capabilities:
                     drop:
@@ -2688,7 +2688,7 @@ spec:
             drop:
             - ALL
           readOnlyRootFilesystem: true
-          runAsNonRoot: true
+          runAsNonRoot: false
         volumeMounts:
         - mountPath: /var/run/secrets/tokens
           name: istio-token

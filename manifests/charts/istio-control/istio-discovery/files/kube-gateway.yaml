@@ -102,7 +102,7 @@ spec:
           readOnlyRootFilesystem: true
           runAsUser: {{ .ProxyUID | default "1337" }}
           runAsGroup: {{ .ProxyGID | default "1337" }}
-          runAsNonRoot: true
+          runAsNonRoot: false
         ports:
         - containerPort: 15021
           name: status-port

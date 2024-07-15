@@ -167,7 +167,7 @@ templates:
           readOnlyRootFilesystem: true
           runAsGroup: {{ .ProxyGID | default "1337" }}
           runAsUser: {{ .ProxyUID | default "1337" }}
-          runAsNonRoot: true
+          runAsNonRoot: false
         {{- end }}
       {{ end -}}
       {{- if eq (annotation .ObjectMeta `sidecar.istio.io/enableCoreDump` .Values.global.proxy.enableCoreDump) "true" }}
@@ -418,7 +418,7 @@ templates:
           runAsNonRoot: false
           runAsUser: 0
           {{- else -}}
-          runAsNonRoot: true
+          runAsNonRoot: false
           runAsUser: {{ .ProxyUID | default "1337" }}
           {{- end }}
           {{- end }}
@@ -1400,7 +1400,7 @@ templates:
               runAsUser: 1337
               allowPrivilegeEscalation: false
               readOnlyRootFilesystem: true
-              runAsNonRoot: true
+              runAsNonRoot: false
               capabilities:
                 drop:
                 - ALL
@@ -1600,7 +1600,7 @@ templates:
               readOnlyRootFilesystem: true
               runAsUser: {{ .ProxyUID | default "1337" }}
               runAsGroup: {{ .ProxyGID | default "1337" }}
-              runAsNonRoot: true
+              runAsNonRoot: false
             ports:
             - containerPort: 15021
               name: status-port

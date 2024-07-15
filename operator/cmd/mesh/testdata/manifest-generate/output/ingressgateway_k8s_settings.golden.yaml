@@ -173,7 +173,7 @@ spec:
           readOnly: true
       securityContext:
         runAsGroup: 1337
-        runAsNonRoot: true
+        runAsNonRoot: false
         runAsUser: 1337
         sysctls:
         - name: net.ipv4.ip_local_port_range
@@ -400,7 +400,7 @@ spec:
           readOnly: true
       securityContext:
         runAsGroup: 1337
-        runAsNonRoot: true
+        runAsNonRoot: false
         runAsUser: 1337
       serviceAccountName: istio-ingressgateway-custom-service-account
       volumes:

@@ -108,7 +108,7 @@ spec:
             drop:
             - ALL
           readOnlyRootFilesystem: true
-          runAsNonRoot: true
+          runAsNonRoot: false
         volumeMounts:
         - mountPath: /var/run/secrets/tokens
           name: istio-token

@@ -166,7 +166,7 @@ spec:
               - ALL
             privileged: false
             readOnlyRootFilesystem: true
-            runAsNonRoot: true
+            runAsNonRoot: false
           resources:
             limits:
               cpu: 200m

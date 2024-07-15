@@ -131,7 +131,7 @@ spec:
           privileged: false
           readOnlyRootFilesystem: true
           runAsGroup: 4321
-          runAsNonRoot: true
+          runAsNonRoot: false
           runAsUser: 1234
         startupProbe:
           failureThreshold: 600

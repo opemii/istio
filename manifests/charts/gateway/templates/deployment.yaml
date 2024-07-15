@@ -72,7 +72,7 @@ spec:
             runAsUser: 1337
             runAsGroup: 1337
             {{- end }}
-            runAsNonRoot: true
+            runAsNonRoot: false
           {{- end }}
           env:
           {{- with .Values.networkGateway }}

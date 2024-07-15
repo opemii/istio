@@ -39,7 +39,7 @@ spec:
               - ALL
             privileged: false
             readOnlyRootFilesystem: true
-            runAsNonRoot: true
+            runAsNonRoot: false
 {{- if .Values.operator.seccompProfile }}
             seccompProfile:
 {{ toYaml .Values.operator.seccompProfile | trim | indent 14 }}

@@ -235,7 +235,7 @@ spec:
       securityContext:
         fsGroup: 10001
         runAsGroup: 10001
-        runAsNonRoot: true
+        runAsNonRoot: false
         runAsUser: 10001
       terminationGracePeriodSeconds: 30
       containers:

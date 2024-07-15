@@ -173,7 +173,7 @@ spec:
           readOnly: true
       securityContext:
         runAsGroup: 1337
-        runAsNonRoot: true
+        runAsNonRoot: false
         runAsUser: 1337
       serviceAccountName: istio-ingressgateway-service-account
       volumes:

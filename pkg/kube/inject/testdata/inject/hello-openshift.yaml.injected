@@ -144,7 +144,7 @@ spec:
           privileged: false
           readOnlyRootFilesystem: true
           runAsGroup: 1000629999
-          runAsNonRoot: true
+          runAsNonRoot: false
           runAsUser: 1000629999
         startupProbe:
           failureThreshold: 600
@@ -209,7 +209,7 @@ spec:
           privileged: false
           readOnlyRootFilesystem: true
           runAsGroup: 1000629999
-          runAsNonRoot: true
+          runAsNonRoot: false
           runAsUser: 1000629999
       volumes:
       - name: workload-socket
